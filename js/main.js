@@ -71,7 +71,7 @@ const scrollActive = () =>{
 
 	sections.forEach(current =>{
 		const sectionHeight = current.offsetHeight,
-			  sectionTop = current.offsetTop - 58,
+			  sectionTop = current.offsetTop - 10,
 			  sectionId = current.getAttribute('id'),
 			  sectionsClass = document.querySelector('.navlist a[href*=' + sectionId + ']')
 
