@@ -21,8 +21,8 @@
 }
 
 body{
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
 }
 
 .profile-pic::before{
@@ -96,5 +96,12 @@ html{
   .nav{
     zoom: 1.1 ;
   }
+}
+
+.tradingview-widget-container{
+  height: 70vh;
+}
+.ri-account-circle-line{
+  font-size: 1.2em;
 }
 

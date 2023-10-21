@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -30,6 +30,8 @@
 2. Prevent adjustments of font size after orientation changes in iOS.
 3. Use a more readable tab size.
 4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
 */
 
 html {
@@ -44,6 +46,10 @@ html {
   /* 3 */
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
 }
 
 /*
@@ -184,6 +190,10 @@ optgroup,
 select,
 textarea {
   font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
   /* 1 */
   font-size: 100%;
   /* 1 */
@@ -336,6 +346,14 @@ menu {
 }
 
 /*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
 Prevent resizing textareas horizontally by default.
 */
 
@@ -410,6 +428,12 @@ video {
   height: auto;
 }
 
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
 html {
   font-family:  Montserrat , sans-serif;
 }
@@ -428,53 +452,9 @@ html {
   --tw-pan-y:  ;
   --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-}
-
-::-webkit-backdrop {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
   --tw-ordinal:  ;
   --tw-slashed-zero:  ;
   --tw-numeric-figure:  ;
@@ -522,6 +502,9 @@ html {
   --tw-pan-y:  ;
   --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
   --tw-ordinal:  ;
   --tw-slashed-zero:  ;
   --tw-numeric-figure:  ;
@@ -601,6 +584,10 @@ html {
   position: relative;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .bottom-8 {
   bottom: 2rem;
 }
@@ -609,30 +596,26 @@ html {
   left: 0px;
 }
 
-.right-0 {
-  right: 0px;
-}
-
 .left-\[5\.6px\] {
   left: 5.6px;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.right-0 {
+  right: 0px;
 }
 
 .z-20 {
   z-index: 20;
 }
 
-.my-0 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .mb-\[20px\] {
@@ -647,10 +630,6 @@ html {
   display: flex;
 }
 
-.h-\[72px\] {
-  height: 72px;
-}
-
 .h-\[130px\] {
   height: 130px;
 }
@@ -659,16 +638,24 @@ html {
   height: 60px;
 }
 
+.h-\[72px\] {
+  height: 72px;
+}
+
 .w-\[328px\] {
   width: 328px;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-\[60px\] {
   width: 60px;
+}
+
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .flex-col {
@@ -692,6 +679,12 @@ html {
        column-gap: 2rem;
 }
 
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -700,20 +693,16 @@ html {
   overflow-y: hidden;
 }
 
-.overflow-y-clip {
-  overflow-y: clip;
-}
-
 .overflow-x-scroll {
   overflow-x: scroll;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .bg-transparent {
@@ -724,9 +713,8 @@ html {
   background-size: cover;
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+.bg-\[50\%\] {
+  background-position: 50%;
 }
 
 .px-6 {
@@ -734,8 +722,14 @@ html {
   padding-right: 1.5rem;
 }
 
-.pt-\[30px\] {
-  padding-top: 30px;
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-\[\.5em\] {
+  padding-top: .5em;
+  padding-bottom: .5em;
 }
 
 .pr-\[20px\] {
@@ -744,6 +738,10 @@ html {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-\[30px\] {
+  padding-top: 30px;
 }
 
 .text-center {
@@ -755,13 +753,13 @@ html {
   line-height: 2rem;
 }
 
+.text-\[14px\] {
+  font-size: 14px;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[14px\] {
-  font-size: 14px;
 }
 
 .font-medium {
@@ -772,12 +770,12 @@ html {
   opacity: 0;
 }
 
-.duration-\[300ms\] {
-  transition-duration: 300ms;
-}
-
 .duration-\[200ms\] {
   transition-duration: 200ms;
+}
+
+.duration-\[300ms\] {
+  transition-duration: 300ms;
 }
 
 /* Chrome, Safari and Opera */
@@ -794,8 +792,8 @@ html {
 }
 
 body{
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }
 
 .profile-pic::before{
@@ -867,5 +865,13 @@ html{
   .nav{
     zoom: 1.1 ;
   }
+}
+
+.tradingview-widget-container{
+  height: 70vh;
+}
+
+.ri-account-circle-line{
+  font-size: 1.2em;
 }
 
