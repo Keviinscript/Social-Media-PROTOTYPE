@@ -18,7 +18,7 @@
 <body class="overflow-y-hidden">
 
      <section class="navv">
-        <nav class=" z-50 nav overflow-hidden fixed bottom-2 left-0 right-0 rounded-lg w-[328px] my-0 mx-auto py-5 px-6  h-[72px] bg-transparent">
+        <nav class=" z-50 nav overflow-hidden fixed bottom-2 left-0 right-0 rounded-lg w-[328px] my-0 mx-auto py-5 px-6  h-[72px] bg-[#131722]">
             <ul class="navlist flex justify-center gap-x-8">
                 <a href="#home" class="navlink flex flex-col items-center active-link">
                     <i class="ri-bar-chart-2-line text-2xl  z-20 duration-[300ms]"></i>
@@ -39,9 +39,9 @@
                     </span>
                 </a>
                 <a href="#cart" class="navlink flex flex-col items-center">
-                    <i class="ri-shopping-cart-2-line text-2xl  z-20 duration-[300ms]"></i>
+                    <i class="ri-user-line text-2xl  z-20 duration-[300ms]"></i>
                     <span class="navname absolute opacity-0 text-xs    font-medium z-20 duration-[200ms]  ">
-                        Cart
+                        Profile
                     </span>
                 </a>
                 <a href="#settings" class="navlink flex flex-col items-center">
@@ -71,10 +71,15 @@
                  <section class="newsfeed"></section> -->
                  <section class="">
         <div class="py-[.5em] flex justify-between w-[90%] mx-auto ">
-            <div class="flex space-x-2 items-center  ">
-                <span><i class="ri-account-circle-line"></i></span>
-                <h2>Salwa Williamss</h2>
+            <div>
+                <div class="flex space-x-2 items-center  ">
+                    <span><i class="ri-account-circle-line"></i></span>
+                    <h2>Salwa Williyams</h2>
+                </div>
+                <h2 class="text-xs">salwa.williyams@gmail.com</h2>
             </div>
+            
+
             <div>
                 <i class="ri-notification-2-line"></i>
             </div>
@@ -136,8 +141,11 @@
                     <div class="flex justify-center items-center border-b-2 border-b-gray-300 pb-2 ">
                         <div class="">
                             <p id="currentDate" class="font-mono"></p>
+                            <p id="current-time" class="text-center font-mono"></p>
                         </div>
                         
+                        
+
      
                     </div>
                     <div class="w-[90%] mx-auto py-[.5em]">
@@ -157,7 +165,7 @@
                             </tr>
                             <tr>
                                 <th class=" text-left">Balance</th>
-                                <td class="text-right">$684.21</td>   
+                                <td class="text-right">$692.40</td>   
                             </tr>
                             
                            
@@ -199,11 +207,51 @@
                     </div>
                 </div>
                 <!-- end -->
+                <!-- each bot history -->
+                <div class="my-[10px]">
+                    <div class="block">
+                        <table class="w-[90%] mx-auto">
+                            <tr>
+                                <th class=" text-left">BTC <span class="font-light text-blue-500">buy</span> </th>
+                                <td class="text-right font-light text-xs">2023.10.22 16:29</td> <!-- date time  -->
+                            </tr>
+                            <tr>
+                                <th class=" text-left font-semibold text-xs">30,931.64</th>
+                                <td class="text-right font-bold text-base tracking-wide">$8.19</td>   
+                            </tr>
+                        </table>
+                        
+                    </div>
+                </div>
+                <!-- end -->
                 
 
             </section>
             <section id="cart">
-                <h2>Cart</h2>
+                <div class="flex justify-center h-[50vh] items-center w-full">
+                    <div class="text-center space-y-1">
+                        <div>
+                            <i class="ri-account-pin-circle-line"></i>     
+                        </div>
+                        <div>
+                            <h1 class="text-[2em] tracking-tight font-semibold">Salwa Williyams</h1>
+                        </div>
+                        <div>
+                            <h1 class="text-[.8em]">salwa.williyams@gmail.com</h1>
+                        </div>
+                    </div>
+                 
+                
+                </div> 
+
+                <div class="flex justify-center items-center">
+                    <div class="profile-info  text-center">
+                        <div class="my-3"><strong>Balance:</strong> $684.21</p>
+                        <div><strong>Phone:</strong> 00447417477919</div>
+                        <div><strong>Country:</strong> United Kingdom</div>
+                        <div><strong>Date Registered:</strong> September 28, 2023</div>
+                    </div>
+                </div>
             </section>
             <section id="settings">
                 <h2>Settings</h2>

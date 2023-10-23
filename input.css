@@ -105,6 +105,11 @@ html{
   font-size: 1.2em;
 }
 
+.ri-account-pin-circle-line{
+  font-size: 3.5em;
+  color: #3bb143;
+}
+
 table {
   border-collapse: collapse;
 }
