@@ -21,14 +21,14 @@
 }
 
 body{
-    background-color: #fff;
-    color: #000;
+    background-color: #131722;
+    color: #fff;
 }
 
 .profile-pic::before{
     content:'' ;
     display: inline-block;
-    border: 2px solid #aecd31;
+    border: 2px solid #3bb143;
     padding: 32px;
     border-radius: 50%;
     position: absolute;
@@ -43,7 +43,7 @@ html{
 }
 
 .nav{
-   border: 1px solid #aecd31;
+   border: 1px solid #3bb143;
 }
 
 .active-link i{
@@ -105,3 +105,9 @@ html{
   font-size: 1.2em;
 }
 
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: none;
+}
