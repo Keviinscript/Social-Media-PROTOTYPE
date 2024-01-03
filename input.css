@@ -99,6 +99,12 @@ html {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .settings {
+    zoom: 0.95;
+  }
+}
+
 @media screen and (min-width: 986px) {
   .nav {
     zoom: 1.1;
