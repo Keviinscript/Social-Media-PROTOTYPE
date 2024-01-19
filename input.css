@@ -2,34 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   overflow-y: hidden;
+  overflow-x: hidden;
+  font-family: Open Sans, sans-serif;
 }
 
-@layer base {
-    html {
-      font-family:  Montserrat , sans-serif;
-    }
+/* @layer base {
+  html {
+    font-family: Open Sans, sans-serif;
   }
+} */
 
 @layer utilities {
-    /* Chrome, Safari and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
-    .no-scrollbar {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-    }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
-body{
-    background-color: #131722;
-    color: #fff;
+body {
+  background-color: #131722;
+  color: #fff;
 }
 
-.profile-pic::before{
+/* .profile-pic::before{
     content:'' ;
     display: inline-block;
     border: 2px solid #3bb143;
@@ -40,76 +42,83 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
 
-}
+} */
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-.nav{
-   border: 1px solid #3bb143;
+.nav {
+  border: 1px solid #3bb143;
 }
 
-.active-link i{
+.active-link i {
   color: #fff;
 }
 
-.active-link .navname{
+.active-link .navname {
   color: #fff;
   opacity: 1;
   transform: translateY(28px);
 }
 
-.container section{
+.container section {
   height: 100vh;
   /* padding: 2rem 0; */
 }
 
-.container h2{
+.container h2 {
   text-align: center;
-  
 }
 
-.navlink:nth-child(1).active-link ~ .indicator{
-  transform: translateX(calc(56px * 0));
+.navlink:nth-child(1).active-link ~ .indicator {
+  transform: translateX(calc(0));
 }
 
-.navlink:nth-child(2).active-link ~ .indicator{
-  transform: translateX(calc(56px * 1));
+.navlink:nth-child(2).active-link ~ .indicator {
+  transform: translateX(calc(52px * 1));
 }
 
-.navlink:nth-child(3).active-link ~ .indicator{
-  transform: translateX(calc(56px * 2));
+.navlink:nth-child(3).active-link ~ .indicator {
+  transform: translateX(calc(52px * 2));
 }
 
-.navlink:nth-child(4).active-link ~ .indicator{
-  transform: translateX(calc(56px * 3));
+.navlink:nth-child(4).active-link ~ .indicator {
+  transform: translateX(calc(52px * 3));
 }
 
-.navlink:nth-child(5).active-link ~ .indicator{
-  transform: translateX(calc(56px * 4));
+.navlink:nth-child(5).active-link ~ .indicator {
+  transform: translateX(calc(52px * 4));
 }
-
-@media screen and (max-width:320px) {
-  .nav{
-    zoom: .8;
+.navlink:nth-child(6).active-link ~ .indicator {
+  transform: translateX(calc(52px * 5));
+}
+@media screen and (max-width: 320px) {
+  .nav {
+    zoom: 0.8;
   }
 }
 
-@media screen and (min-width:986px) {
-  .nav{
-    zoom: 1.1 ;
+@media screen and (max-width: 375px) {
+  .settings {
+    zoom: 0.95;
   }
 }
 
-.tradingview-widget-container{
+@media screen and (min-width: 986px) {
+  .nav {
+    zoom: 1.1;
+  }
+}
+
+.tradingview-widget-container {
   height: 80vh;
 }
-.ri-account-circle-line{
+.ri-account-circle-line {
   font-size: 1.2em;
 }
 
-.ri-account-pin-circle-line{
+.ri-account-pin-circle-line {
   font-size: 3.5em;
   color: #3bb143;
 }
@@ -117,6 +126,27 @@ html{
 table {
   border-collapse: collapse;
 }
-table, th, td {
+table,
+th,
+td {
   border: none;
+}
+
+.dropdown-content {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
 }
